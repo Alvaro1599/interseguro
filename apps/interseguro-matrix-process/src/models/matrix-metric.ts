@@ -18,7 +18,7 @@ export class MatrixMetric {
 
   constructor(public matrix: MatrixQR) {}
 
-  execute(): string {
+  execute() {
     const result = {};
 
     for (const element of this.functionsToApplyWithKeys) {
@@ -29,6 +29,6 @@ export class MatrixMetric {
         Q: func(this.matrix.Q),
       };
     }
-    return JSON.stringify(result);
+    return result;
   }
 }
