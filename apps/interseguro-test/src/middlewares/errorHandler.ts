@@ -1,10 +1,5 @@
 import { Request, Response } from 'express';
 
-export const errorHandler = (
-  err: Error,
-  req: Request,
-  res: Response,
-): void => {
-  console.error(err.stack);
+export const errorHandler = (req: Request, res: Response): void => {
   res.status(500).json({ error: 'Algo salió mal en el servidor' });
 };

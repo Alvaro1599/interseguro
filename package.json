@@ -2,7 +2,9 @@
   "name": "@interseguro-test/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "run-services": "nx run interseguro-test:serve:development && nx run interseguro-matrix-process:serve:development"
+  },
   "private": true,
   "dependencies": {
     "axios": "^1.6.0",

@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import { MatrixService } from '../services/matrix.services';
-import { HttpAdapter } from '@interseguro-test/utils';
 
 export class MatrixController {
   private matrixService: MatrixService;
