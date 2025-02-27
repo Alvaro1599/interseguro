@@ -1,4 +1,4 @@
-import { Matrix, Vector } from '@interseguro-test/models';
+import { Matrix, MatrixQR, Vector } from '@interseguro-test/models';
 
 export function dot(v1: Vector, v2: Vector): number {
   if (v1.length !== v2.length) {
@@ -26,7 +26,7 @@ export function getColumn(matrix: Matrix, col: number): Vector {
   return matrix.map((row) => row[col]);
 }
 
-export function QRFactorization(matrix: Matrix) {
+export function QRFactorization(matrix: Matrix): MatrixQR {
   const m = matrix.length;
   if (m === 0) return { Q: [], R: [] };
   const n = matrix[0].length;

@@ -1,6 +1,6 @@
 import { HttpMethod, RequestOptions } from './types';
 
-class HttpAdapter {
+export class HttpAdapter {
   private readonly baseUrl: string;
 
   constructor(baseUrl: string) {
@@ -40,6 +40,7 @@ class HttpAdapter {
     body: any,
     options: RequestOptions = {}
   ): Promise<T> {
+    console.log('POST', endpoint, body, options);
     return this.request<T>('POST', endpoint, { ...options, body });
   }
 }

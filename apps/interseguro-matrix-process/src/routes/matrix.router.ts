@@ -4,8 +4,6 @@ import { MatrixProcessController } from '../controllers/matrixProcessController'
 const matrixRouter: Router = express.Router();
 const matrixProcessController = new MatrixProcessController();
 
-matrixRouter.post('/process', (req, res) =>
-  matrixProcessController.process(req, res)
-);
+matrixRouter.post('/', (req, res) => matrixProcessController.process(req, res));
 
 export default matrixRouter;

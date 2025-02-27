@@ -5,7 +5,6 @@ import { MatrixMetric } from '../models/matrix-metric';
 export class MatrixProcessService {
   public process(matrixQR: MatrixQR): string {
     const matrixMetric = new MatrixMetric(matrixQR);
-
     return matrixMetric.execute();
   }
 }
