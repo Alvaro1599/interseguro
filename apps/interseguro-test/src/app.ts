@@ -1,9 +1,9 @@
-import express,{ Application } from 'express';
-import cors from "cors"
-import morgan from "morgan"
+import express, { Application } from 'express';
+import cors from 'cors';
+import morgan from 'morgan';
 import matrixRouter from './routes/matrix.router';
 import { errorHandler } from './middlewares/errorHandler';
-
+import jwtRouter from './routes/jwt.router';
 
 export class App {
   private app: Application;
@@ -23,6 +23,7 @@ export class App {
 
   private setupRoutes(): void {
     this.app.use('/api/matrix', matrixRouter);
+    this.app.use('/api/jwt', jwtRouter);
   }
 
   private handleErrors(): void {

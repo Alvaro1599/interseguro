@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@interseguro-test/jwt": ["libs/jwt/src/index.ts"],
       "@interseguro-test/models": ["libs/models/src/index.ts"],
       "@interseguro-test/utils": ["libs/utils/src/index.ts"]
     }
