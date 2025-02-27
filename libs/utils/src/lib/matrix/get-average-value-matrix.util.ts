@@ -1,6 +1,6 @@
 import { Matrix } from '@interseguro-test/models';
 
-export function averageValueMatrixUtil(matrix: Matrix): number {
+export function getAverageValueMatrixUtil(matrix: Matrix): number {
   let sum = 0;
   let count = 0;
 

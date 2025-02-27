@@ -10,8 +10,8 @@ export class MatrixProcessController {
 
   public async process(req: Request, res: Response): Promise<void> {
     try {
-      const { matrix } = req.body;
-      const matrixTransformed = this.matrixProcessService.process(matrix);
+      const { matrixQR } = req.body;
+      const matrixTransformed = this.matrixProcessService.process(matrixQR);
       res.status(201).json(matrixTransformed);
     } catch (error) {
       res.status(400).json({ error: 'Datos inválidos' });

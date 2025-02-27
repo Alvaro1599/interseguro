@@ -1,8 +1,11 @@
 import { QRFactorization } from '@interseguro-test/utils';
-import { Matrix } from '@interseguro-test/models';
+import { Matrix, MatrixQR } from '@interseguro-test/models';
+import { MatrixMetric } from '../models/matrix-metric';
 
 export class MatrixProcessService {
-  public process(matrix: Partial<Matrix>): Matrix {
-    return matrix;
+  public process(matrixQR: MatrixQR): string {
+    const matrixMetric = new MatrixMetric(matrixQR);
+
+    return matrixMetric.execute();
   }
 }
