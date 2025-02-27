@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "run-services": "nx run interseguro-test:serve:development && nx run interseguro-matrix-process:serve:development"
+    "run-services": "nx run interseguro-test:serve:development && nx run interseguro-matrix-process:serve:development",
+    "run-test": "nx run interseguro-test:serve:development && nx run interseguro-matrix-process:serve:development"
   },
   "private": true,
   "dependencies": {
