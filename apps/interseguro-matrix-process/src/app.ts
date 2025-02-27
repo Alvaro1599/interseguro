@@ -1,9 +1,8 @@
-import express,{ Application } from 'express';
-import cors from "cors"
-import morgan from "morgan"
+import express, { Application } from 'express';
+import cors from 'cors';
+import morgan from 'morgan';
 import matrixRouter from './routes/matrix.router';
 import { errorHandler } from './middlewares/errorHandler';
-
 
 export class App {
   private app: Application;
@@ -22,7 +21,7 @@ export class App {
   }
 
   private setupRoutes(): void {
-    this.app.use('/api/matrix', matrixRouter);
+    this.app.use('/api/matrix-process', matrixRouter);
   }
 
   private handleErrors(): void {
