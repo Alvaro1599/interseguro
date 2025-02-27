@@ -1,4 +1,4 @@
-# API de Factorización QR
+# Interseguro Test
 
 Este proyecto es una API construida con [Nx](https://nx.dev/) que implementa un servicio de factorización QR de matrices y generación de estadísticas basadas en ellas. La API consta de dos servicios que se comunican entre sí y están desarrollados en **Node.js 22**, utilizando **TypeScript**, **pnpm** y **Jest** para pruebas. La arquitectura utilizada es **MCV** por simplicidad.
 
